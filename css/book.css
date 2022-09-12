@@ -1,0 +1,601 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    height: 1650px; 
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+ 
+}
+body{
+    background-color: #f8f9fa;
+    font-family: 'Outfit', sans-serif;
+    color:var(--newdark);
+    overflow-x: hidden;   
+}
+:root{
+    --newwhite:#D2D79F;
+    --newdark:#483838 ;
+    --newlightgreen:#90B77D;
+    --newdarkgreen:#42855B;
+
+}
+.container{
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-position:left;
+    min-height: 100vh;
+    width:100%;
+    background-attachment: fixed;
+    position: relative;
+    color:var(--newwhite);
+    background-image: url('../images/southgate.jpg');
+    background-color: rgba(66, 133, 91,0.2);
+    background-blend-mode: multiply;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:white;
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    padding:0px 2%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    z-index: 1000;
+    color: var(--white);
+    border-top:2px solid grey;
+}
+header .logo{
+    font-size:clamp(1rem,1.8rem,4rem);
+    color:var(--newdarkgreen); 
+    font-weight: 600;
+    margin-left: .5rem;
+} 
+header .first-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar ul{
+    list-style:none;
+}
+header .navbar ul li{
+    position: relative;
+    float:left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding:20px;
+    color:var(--newdarkgreen);
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: var(--newdarkgreen);
+    color:var(--newwhite);
+ 
+}
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 200px;
+    background: var(--newwhite);
+    display: none;
+    color:var(--newdarkgreen);
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li a{
+    color:var(--newdark);
+}
+
+header .navbar ul li ul li ul{
+    left:200px;
+    top:0; 
+}
+header .navbar ul li:focus-within > ul, 
+header .navbar ul li:hover > ul{
+    display: initial;
+
+}
+#menu-bar{
+    display:none;
+}
+header label{
+    font-size: 20px;
+    color:var(--newdark);
+    cursor:pointer;
+    display:none;
+}
+/* END OF HEADER */
+
+
+
+
+/* ********************************************************** */
+@keyframes fadeintitle {
+    from{
+    opacity: .1; 
+    margin-top: 5rem;
+    }
+    to{
+    opacity: 1;
+    margin-top:0;
+ 
+    }
+} 
+
+.container .main-text h1{
+    font-size:clamp(.3rem,3.1rem,12rem);
+    font-weight: 700;
+    color:var(--newdarkgreen);
+    text-shadow: 1px 2px 1px var(--newdark);
+    text-transform: uppercase;
+}
+.container .main-text h3{
+    font-size:clamp(2rem,1.2rem,5rem);
+    color:var(--newdark);
+    text-shadow: 1px 2px 1px var(--newwhite);
+    font-weight: 600;
+    text-transform: initial;
+}
+.container .main-text{
+    width: 70%;
+    color:var(--newwhite);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    animation-name: fadeintitle;
+    animation-duration: 2.1s;
+    transition: .3s;
+    background:rgba(244,244, 244,0.8);
+    padding:1.8rem 1rem;
+    border-radius:1rem;
+    box-shadow: 5px 3px 5px rgba(0,0,0,0.5);  
+}
+/* end of header title display ***********/
+
+
+/* ************************************************* MAIN CONTAINER */
+.main-container{
+    width: 100%;
+    padding: .8rem;
+    margin-top: 2rem;
+    display: grid;
+}
+
+.reservation-form .title{
+    margin-bottom: 1rem;
+}
+.reservation-form{
+     /* border:2px solid blue; */
+     margin-bottom: 1.5rem;
+} 
+.reservation-form .form input,textarea,select{
+    padding: .4rem 1rem;
+    margin-bottom: .8rem;
+    width: 100%;
+    margin-top: .5rem;
+}
+.reservation-form .form button{
+    margin-top: .5rem;
+    padding: .5rem 1.3rem;
+    border:none;
+    background-color: var(--newdarkgreen);
+    color:var(--newwhite);
+}
+.reservation-form .form button:hover{
+    background-color: white;
+    color:var(--newdarkgreen);
+    border:2px solid var(--newdarkgreen);
+}
+
+.reservation-form .form textarea{
+    height: 12rem;
+}
+/**************************** icon positioning********************************* */
+.reservation-form .arrival{
+    position: relative;
+}
+.reservation-form .arrival span{
+    position: absolute;
+    right: 10px;
+    top:32px;
+}
+.reservation-form .departure{
+    position: relative;
+}
+.reservation-form .departure span{
+    position: absolute;
+    right:10px;
+    top:32px;
+}
+/* ********************* end of icon positioning ************/
+
+
+/* featured room / presidential room  */
+.presidential-room img{
+    max-width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+.presidential-room{
+    background-color: rgba(230, 245, 234,0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 17px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 2rem;
+    position: relative;  
+    padding-bottom: 4.3rem;
+}
+.presidential-room h3,h2,p,button{
+    padding:0 1rem;
+}
+.presidential-room h3,h2,button{
+   line-height: 1.8; 
+}
+.presidential-room h2{
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    font-size: 1.5rem;
+}
+.presidential-room button{
+    padding:.5rem;
+    margin-left: 1rem;
+    position: relative;
+    top:2.1rem;
+    background-color: var(--newdarkgreen);
+    color:var(--newwhite);
+    border: none;
+}
+.presidential-room .abso{
+    position: absolute;
+    color:white; 
+    bottom:14rem;
+    padding: 1rem;
+    margin: 2rem .5rem;
+    font-size: .9rem;
+    font-weight: 100;
+}
+.featured-room{
+    position: relative;
+    margin-bottom: 10rem;
+}
+.featured-room .title h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #c9c8c3;
+    position:relative;
+    width:100%;
+    height:47vh;
+    padding-top: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+    color:var(--newdark);
+}
+#text-footer{
+    text-align: center;
+    font-family: 'Rubik';
+    display: relative;
+    padding-top:4rem;
+    font-size:1.1rem;
+    color:gray;
+}
+
+footer .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+footer .footer .ft h4{
+    font-size: 1.2rem;
+    color:var(--newdark);
+}
+footer .footer .ft h3{
+    font-size: 1rem;
+}
+footer .footer .ft input{
+    padding:.2rem;
+    border:#c9c8c3;
+}
+/* icons hover */
+.fa-facebook-f:hover{
+    color:#1877f2;
+}
+.fa-twitter:hover{
+    color:dodgerblue;
+}
+.fa-instagram:hover{
+    color:orangered;
+}
+.fa-envelope-open:hover{
+    color:rgb(158, 60, 60);
+}
+.fa-youtube:hover{
+    color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **************************************jquery dates */
+.ui-datepicker {
+    width: 216px;
+    height: auto;
+    margin: 5px auto 0;
+    font: 9pt Arial, sans-serif;
+    background-color: var(--newdark);
+    padding: .5rem;
+    color:white;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+    display: none;
+  }
+  .ui-datepicker a {
+    text-decoration: none;
+
+  }
+
+.ui-datepicker table {
+  width: 100%;
+}
+.ui-datepicker-header {
+    background: url('../img/dark_leather.png'); /*repeat 0 0 #000 */
+    color: #e0e0e0;
+    font-weight: bold;
+    font-size: .9rem;
+    -webkit-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, 2);
+    -moz-box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
+    box-shadow: inset 0px 1px 1px 0px rgba(250, 250, 250, .2);
+    filter: dropshadow(color=#000, offx=1, offy=-1);
+    line-height: 30px;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #111;
+  }
+  .ui-datepicker-title {
+    text-align: center;
+  }
+  .ui-datepicker-prev, .ui-datepicker-next {
+    display: inline-block;
+    width: 32px;
+    height: 57px;
+    text-align: center;
+    cursor: pointer;
+    background-image: url('../img/arrow.png');
+    background-repeat: no-repeat;
+    line-height: 600%;
+    overflow: hidden;
+  }
+  .ui-datepicker-prev {
+    float: left;
+    background-position: center -30px;
+  }
+  
+  .ui-datepicker-next {
+    float: right;
+    background-position: center 0px;
+  }
+  .ui-datepicker thead {
+    background-color: #f7f7f7;
+    background-image: -moz-linear-gradient(top,  #f7f7f7 0%, #f1f1f1 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#f1f1f1));
+    background-image: -webkit-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: -o-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: -ms-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    background-image: linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1',GradientType=0 );
+    border-bottom: 1px solid #bbb;
+  }
+  .ui-datepicker th {
+    text-transform: uppercase;
+    font-size: 6pt;
+    padding: 5px 0;
+    color: #666666;
+    text-shadow: 1px 0px 0px #fff;
+    filter: dropshadow(color=#fff, offx=1, offy=0);
+  }
+/* ******************************* END OF JQUERY DATES ******************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY ***************/
+@media (max-width:991px) {
+    /* HEADER */
+
+    header{
+       padding:20px;
+   }
+   header label{
+       display: initial;
+   }
+   header .navbar{
+       position: absolute;
+       top:100%;
+       left:0;
+       right:0;
+       background: #fff;
+       border-top: 1px solid rgba(0,0,0,.1);
+       display:none;
+   }
+   header .navbar ul li{
+       width: 100%;
+   }
+   header .navbar ul li ul{
+       position: relative;
+   }
+   #menu-bar:checked ~ .navbar{
+       display: initial;
+   }
+   /* end of header */
+
+   /* footer */
+   footer{
+    margin-top:5rem;
+    padding:1rem;
+    height: 30rem;
+}
+footer .footer{
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+   /* hide img */
+   .first-navbar img{
+    display: none;
+   }
+   .container .main-text h1{
+    font-size:clamp(.3rem,2.2rem,12rem);
+   }
+   .container .main-text h3{
+    font-size:clamp(.3rem,1.5rem,12rem);
+   }
+}
+
+@media (min-width:550px){
+    .main-container{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+    .presidential-room .abso{
+        bottom:15rem;
+    }
+    .featured-room h1{
+        text-align: center;
+    }
+
+}
+
+@media screen and (min-width:1150px) {
+    .reservation-form{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap:-5rem;
+        grid-auto-rows: 83px;
+    }
+  
+    .title{
+        grid-column:1/-1;
+        margin-bottom: 0;
+    }
+    .arrival{
+        grid-row:2;
+    }
+    .departure{
+        grid-row:2;
+    }
+    .message{
+        grid-row:5;
+       
+    }
+    .reservation-form .form textarea{
+        width: 164%;
+    }
+    .button-reserve{
+        grid-row:6;
+    }
+    .reservation-form .form input,textarea,select{
+        width:83%;
+    }
+    .reservation-form button{
+        margin-top:3rem;
+        position: relative;
+        top:7rem;
+    }
+    .email{
+        position: relative;
+        bottom:1rem;
+    }
+    #movelabel{
+        position: relative;
+        bottom:1.8rem;
+    }
+    #moveinput{
+        position: relative;
+        right:2.8rem;
+    }
+    .reservation-form .arrival span{
+        right: 3.8rem;
+    }
+    .reservation-form .departure span{
+        right: 3.8rem;
+    }
+    .featured-room .presidential-room{
+        width: 68%;
+    }
+    .featured-room{
+        display: grid;
+        place-items:center;
+        position: relative;
+        left:2.1rem;
+    }
+    .reservation-form{
+        margin-left: 3rem;
+        position: relative;
+        left:5rem;
+    }
+    .main-container{
+        margin-top: 3.5rem;
+    }
+    .reservation-form .message{
+        position: relative;
+        bottom: 2.5rem;
+    }
+   .presidential-room .abso{
+    bottom:12.5rem;
+   }
+
+}

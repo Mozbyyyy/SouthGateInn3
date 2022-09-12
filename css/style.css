@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    height: 3100px;
+    scroll-behavior: smooth;
+ 
+}
+:root{
+    --darkgreen:#000000;
+    --red:#841818;
+    --yellow:#E0BB20;
+    --white:#FAFAFA;
+    /* new colors */
+    --newwhite:#D2D79F;
+    --newdark:#483838 ;
+    --newlightgreen:#90B77D;
+    --newdarkgreen:#42855B;
+}
+.container{
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-position:left;
+    min-height: 100vh;
+    width:100%;
+    background-attachment: fixed;
+    position: relative;
+    color:var(--newwhite);
+    background-image: url('../images/southgate.jpg');
+    background-color: rgba(66, 133, 91,0.2);
+    background-blend-mode: multiply;
+  
+  
+}
+body{
+    /* font-family: 'Rajdhani', sans-serif; */
+    font-family: 'Outfit', sans-serif;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color:rgba(255,255,253,1);
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    padding:0px 2%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    z-index: 1000;
+    color: var(--white);
+
+}
+header .logo{
+    font-size:clamp(1rem,1.8rem,4rem);
+    color:var(--newdarkgreen); 
+    /* position: relative;
+    left:-15rem;  */
+    font-weight: 600;
+    margin-left: .5rem;
+} 
+header .first-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar ul{
+    list-style:none;
+}
+header .navbar ul li{
+    position: relative;
+    float:left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding:20px;
+    color:var(--newdarkgreen);
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: var(--newdarkgreen);
+    color:var(--newwhite);
+ 
+}
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 200px;
+    background: var(--newwhite);
+    display: none;
+    color:var(--newdarkgreen);
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li a{
+    color:var(--newdark);
+}
+
+header .navbar ul li ul li ul{
+    left:200px;
+    top:0; 
+}
+header .navbar ul li:focus-within > ul, 
+header .navbar ul li:hover > ul{
+    display: initial;
+
+}
+#menu-bar{
+    display:none;
+}
+header label{
+    font-size: 20px;
+    color:var(--newdark);
+    cursor:pointer;
+    display:none;
+}
+
+/* main text */
+.container .main-text{
+    width: 75%;
+    color:var(--newwhite);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    animation-name: fadeintitle;
+    animation-duration: 2.1s;
+    transition: .3s;
+    background:rgba(244,244, 244,0.8);
+    padding:1.8rem 1.5rem;
+    border-radius:1rem;
+    box-shadow: 5px 3px 5px rgba(0,0,0,0.5);
+  
+}
+/* KEYFRAMES */
+ @keyframes fadeintitle {
+    from{
+    opacity: .1; 
+    margin-top: 5rem;
+    }
+    to{
+    opacity: 1;
+    margin-top:0;
+ 
+    }
+} 
+/* end of keyframes */
+
+/* animation */
+
+
+/* end of animation */
+.container .main-text h1{
+    font-size:clamp(3.3vw,3.8rem,7rem);
+    font-weight: 700;
+    color:var(--newdarkgreen);
+    text-shadow: 1px 2px 1px var(--newdark);
+    text-transform: uppercase;
+}
+.container .main-text h3{
+    font-size:clamp(2rem,2.2rem,5rem);
+    color:var(--newdark);
+    text-shadow: 1px 2px 1px var(--newwhite);
+    font-weight: 600;
+    text-transform: initial;
+}
+.sg-button{
+    padding:.8rem 1.5rem;
+    margin-top: 1.1rem;
+    font-size: .9rem;
+    border:none;
+    background-color:var(--newdarkgreen);
+    color:var(--newwhite);
+    font-weight: 700;
+}
+.sg-button:hover{
+    background-color: white;
+    color:var(--newdarkgreen); 
+    outline:1px solid var(--newdark);
+}
+/* first title */
+section .first-title{
+    width: 90%;
+    color:var(--newdark);
+    position:relative;
+    top:4rem;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 10rem;  
+}
+
+section .first-title h1{
+    margin-bottom: .7rem;
+    font-size:clamp(2rem,3rem,5rem);
+    color:var(--newdarkgreen);
+
+}
+section .first-title h3{
+    font-size:clamp(.8rem,1.1rem,5rem);
+
+}
+/* section .first-title button{
+    background-color: var(--yellow);
+    color:var(--darkgreen);
+    margin-top: 1.8rem;
+}
+section .first-title button:hover{
+    background-color: var(--green);
+    color:var(--white);
+} */
+/* gallery */
+.secondpage-gallery{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    align-items: center;
+}
+.secondpage-gallery .img{
+    width:55%;
+
+}
+.secondpage-gallery .img img{
+    width:100%;
+	-webkit-transition: .3s ease-in-out;
+	transition: .4s ease-in-out;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+    border-radius: 5px;
+}
+.secondpage-gallery .img img:hover{
+    background-image:linear-gradient(rgba(224,187,32,0.6));
+    filter: brightness(1.2);
+}
+
+
+
+
+
+
+/* third page  rooms*/
+section .thirdpage{
+    background-color: white;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+    align-items: center;
+    margin-top: 5rem;
+    margin-inline: auto;
+    padding:1.2rem;
+    position: relative;
+    height: 41%;
+    color:var(--newdark);
+}
+section .thirdpage h1{
+    color:var(--newdarkgreen);
+}
+.thirdpage .img2 img{
+    width:100%;
+    position: relative;
+}
+.thirdpage .gallery2{
+    background-color: white;
+    position: relative; 
+}
+.thirdpage .gallery1{
+    background-color: white;
+    position: relative; 
+}
+.thirdpage .gallery3{
+    background-color: white;
+    position: relative; 
+}
+.thirdpage .presidential{
+    width: 90%;
+    margin-left: 1.2rem;
+    line-height: 1.8rem;
+    padding:2rem .1rem;
+    position: relative;
+    
+}
+.thirdpage .presidential button{
+    background-color: var(--newdarkgreen);
+    color:var(--newwhite);
+}
+.thirdpage .presidential button:hover{
+    background-color: var(--newdarkgreen);
+    color:var(--newwhite);
+    border:none;
+    outline: none;
+    border:1px solid var(--newdark);
+    background-color: white;
+    color:var(--newdarkgreen);
+}
+.thirdpage .presidential h2{
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    color:var(--newdarkgreen);
+}
+.thirdpage-gallery p{
+    font-size: .9rem;
+    margin-top: 1rem;
+    color:var(--newdark);
+}
+
+
+/* recent events */
+section .third-page{
+    background-color: #e6e3e3;
+    width:100%;
+    height: 25%;
+    color:var(--newdark);
+}
+section .third-page h1{
+    color:var(--newdarkgreen);
+}
+.third-page .recent-events .item{
+    width:25%;
+    height:30rem;
+    background-color: white;
+}
+.third-page .recent-events{
+    width: 93%;
+    background-color: #e6e3e3;
+    margin:0 auto;
+    position: relative;
+    top:2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:3rem;
+  
+}
+.recent-events .item img{
+    width:100%;
+    height:41%;
+}
+.recent-events .text{
+    position: relative;
+    margin-inline: 1.2rem;
+    top:1.5rem; 
+    line-height: 2rem;
+}
+.recent-events .text h3{
+    color:var(--newdarkgreen);
+}
+.recent-events .text h6{
+    line-height: 1.2rem;
+    font-size: clamp(.4rem,.8rem,3rem);
+    margin-top: .8rem;
+}
+/* footer */
+footer{
+    background-color: #c9c8c3;
+    position:absolute;
+    width:100%;
+    height:47vh;
+    padding-top: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+    color:var(--newdark);
+}
+#text-footer{
+    text-align: center;
+    font-family: 'Rubik';
+    display: relative;
+    padding-top:4rem;
+    font-size:1.1rem;
+    color:gray;
+}
+footer .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+footer .footer .ft h4{
+    font-size: 1.2rem;
+    color:var(--newdark);
+}
+footer .footer .ft h3{
+    font-size: 1rem;
+}
+footer .footer .ft input{
+    padding:.2rem;
+    border:#c9c8c3;
+}
+/* icons hover */
+.fa-facebook-f:hover{
+    color:#1877f2;
+}
+.fa-twitter:hover{
+    color:dodgerblue;
+}
+.fa-instagram:hover{
+    color:orangered;
+}
+.fa-envelope-open:hover{
+    color:rgb(158, 60, 60);
+}
+.fa-youtube:hover{
+    color:red;
+}
+img{
+    object-fit: cover;
+}
+/* ANIMATIONS */
+
+
+
+
+
+
+
+
+
+/* media query  to large*/
+@media screen and (min-width: 993px) {
+    .secondpage-gallery{
+        flex-direction: row;
+        margin: 0 auto;
+        width:80%;
+        margin-top: 3rem;
+      
+    }
+    .secondpage-gallery .img img{
+        height: 50vh;
+    }
+    /* third page */
+    section .thirdpage{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        background-color: #eeedeb;
+        align-items: flex-start;
+        width: 90%;   
+        margin-top: 8rem; 
+        height: 24%;
+    }
+    .thirdpage .img2{
+        position: relative;
+        top:5rem; 
+        width: 65%;   
+        right:3rem;  
+    }
+    .thirdpage h1{
+        position: relative;
+        left:49%;
+        text-align: center;
+        
+    }
+    .thirdpage .img2 img{
+        width: 100%;
+    }
+    /* .thirdpage .gallery2{
+        height: 85%;
+    } */
+
+}
+/* to smaller */
+@media (max-width:991px) {
+    /* header */
+    .container .main-text h1{
+        font-size:clamp(.3rem,2.4rem,12rem);
+        margin-bottom: .5rem;
+       }
+       .container .main-text h3{
+        font-size:clamp(2rem,.7rem,5rem);
+       }
+    header{
+        padding:20px;
+    }
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,.1);
+        display:none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+    /* end of header and start of recent events MQ */
+
+    .third-page .recent-events{
+        flex-direction: column;
+       
+    }
+    .third-page .recent-events .item{
+        width:76%;
+        margin:0 auto;
+       
+    }
+    section .third-page{
+        background-color: #e6e3e3;
+        width:100%;
+        height: 60%;
+        margin-top: 3rem;
+        position: relative;
+        top:35rem;
+        
+    }
+ 
+    /* .thirdpage-gallery .gallery3{
+        height: 65%;
+        margin-top: 10rem;
+    } */
+    .recent-events .item img{
+        width:100%;
+        height:41%;
+    }
+    footer{
+        margin-top:40rem;
+        height: 30rem;
+        padding: 1rem;
+    }
+    footer .footer{
+        flex-direction: column;
+        align-items: center;
+        gap:2rem;
+        text-align: center;
+        line-height: 1.5rem;
+       
+    }
+    .footer .first-footer{
+        padding-top: 2rem;
+    }
+    .container .main-text{
+        padding:1.8rem;
+        width:90%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background:rgba(244,244,244,0.8);
+
+   
+    }
+    .secondpage-gallery .img{
+        width:80%;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0,0.5);
+    }
+    .first-navbar img{
+        display: none;
+    } 
+    section .thirdpage-gallery{
+        background-color: rgba(66, 133, 91,0.2);
+        height:120rem;
+    }
+    section .third-page{
+       background-color: rgba(66, 133, 91,0.2);
+    }
+
+
+}
+
+
+
+@media (max-width:392px) {
+    .container .main-text{
+        width:100%;
+    }
+    section .third-page{
+        top:7rem;
+    }
+    footer{
+        margin-top:10rem;
+        height: 67vh;
+    }
+    .main-text{
+        overflow-wrap: break-word;  
+        word-wrap: break-word; 
+        word-break: break-word;
+        padding:.1rem 0;
+    }
+    .main-text h1{
+        font-size: 2.3rem !important;
+    }
+    .main-text h3{
+        font-size: 1.5rem !important;
+        margin-bottom: .2rem;
+    }
+}

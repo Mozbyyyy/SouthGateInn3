@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    height: 1650px; 
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+ 
+}
+body{
+    background-color: #f8f9fa;
+    font-family: 'Outfit', sans-serif;
+    
+    color:var(--newdark);
+    overflow-x: hidden;   
+}
+:root{
+    --newwhite:#D2D79F;
+    --newdark:#483838 ;
+    --newlightgreen:#90B77D;
+    --newdarkgreen:#42855B;
+
+}
+.container{
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-position:left;
+    min-height: 100vh;
+    width:100%;
+    background-attachment: fixed;
+    position: relative;
+    color:var(--newwhite);
+    background-image: url('../images/southgate.jpg');
+    background-color: rgba(66, 133, 91,0.2);
+    background-blend-mode: multiply;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background:white;
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    padding:0px 2%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    z-index: 1000;
+    color: var(--white);
+    border-top:2px solid grey;
+}
+header .logo{
+    font-size:clamp(1rem,1.8rem,4rem);
+    color:var(--newdarkgreen); 
+    font-weight: 600;
+    margin-left: .5rem;
+} 
+header .first-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar ul{
+    list-style:none;
+}
+header .navbar ul li{
+    position: relative;
+    float:left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding:20px;
+    color:var(--newdarkgreen);
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: var(--newdarkgreen);
+    color:var(--newwhite);
+ 
+}
+header .navbar ul li ul{
+    position: absolute;
+    left:0;
+    width: 200px;
+    background: var(--newwhite);
+    display: none;
+    color:var(--newdarkgreen);
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li ul li a{
+    color:var(--newdark);
+}
+
+header .navbar ul li ul li ul{
+    left:200px;
+    top:0; 
+}
+header .navbar ul li:focus-within > ul, 
+header .navbar ul li:hover > ul{
+    display: initial;
+
+}
+#menu-bar{
+    display:none;
+}
+header label{
+    font-size: 20px;
+    color:var(--newdark);
+    cursor:pointer;
+    display:none;
+}
+/* END OF HEADER */
+
+
+
+
+
+
+
+
+/* ********************************************************** */
+@keyframes fadeintitle {
+    from{
+    opacity: .1; 
+    margin-top: 5rem;
+    }
+    to{
+    opacity: 1;
+    margin-top:0;
+ 
+    }
+} 
+
+.container .main-text h1{
+    font-size:clamp(.3rem,3.1rem,7rem);
+    font-weight: 700;
+    color:var(--newdarkgreen);
+    text-shadow: 1px 2px 1px var(--newdark);
+    text-transform: uppercase;
+}
+.container .main-text h3{
+    font-size:clamp(2rem,1.2rem,5rem);
+    color:var(--newdark);
+    text-shadow: 1px 2px 1px var(--newwhite);
+    font-weight: 600;
+    text-transform: initial;
+}
+.container .main-text{
+    width: 70%;
+    color:var(--newwhite);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    animation-name: fadeintitle;
+    animation-duration: 2.1s;
+    transition: .3s;
+    background:rgba(244,244, 244,0.8);
+    padding:1.8rem 1rem;
+    border-radius:1rem;
+    box-shadow: 5px 3px 5px rgba(0,0,0,0.5);  
+}
+
+/* SUB */
+.sub-container{
+    font-family: 'Rajdhani', sans-serif;
+    width:100%;
+    position: relative;
+    top:5rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+.sub-container h2{
+    font-size: clamp(1rem,2.1rem,3rem);
+    text-align: center;
+    margin-bottom:2.5rem;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap:.5rem;
+
+  
+    
+}
+.contact-info .grid{
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.contact-info .grid p{
+    border-top: 1px solid grey;
+    height: 2px;
+    margin-top: .5rem;
+}
+.contact-info h5{
+    font-size: 1.2rem;
+}
+.icons i{
+    border-radius: 50%;
+    padding:.7rem;
+    margin-right: .5rem;
+    margin-top: .6rem;
+}
+.phone-info{
+    margin-top: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.phone-info .fa-phone{
+    margin-right: 1rem;
+}
+.phone-info h6{
+    font-size: .9rem;
+}
+.address-info{
+    margin-top: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.address-info h6{
+    font-size: .9rem;
+}
+.address-info .fa-map-marker-alt{
+    margin-right: 1rem;
+}
+.email-info{
+    margin-top: .8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.email-info h6{
+    font-size: .9rem;
+}
+.email-info .fa-envelope-open{
+    margin-right: 1rem;
+}
+/* second grid */
+
+
+.grid-form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    top:3.1rem;
+}
+.grid-form .form{
+    margin: 1rem;
+    padding: .5rem;
+  
+}
+.form form{
+    display: grid;
+    justify-content: center;
+    padding-top: 2rem;
+ 
+}
+.form input,textarea{
+    width: 20rem;
+    margin-bottom: .6rem;
+    padding: .8rem 1rem;
+    border:1px solid grey;
+}
+.form textarea{
+    height: 17vh;
+}
+.form button{
+    width: 65%;
+    padding: .6rem;
+    background-color: var(--newdarkgreen);
+    color:var(--newwhite);
+    border: none;
+    font-family: 'Rajdhani', sans-serif;
+}
+::placeholder{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+}
+
+.side-page{
+  padding: 1rem .5rem;
+  margin-bottom: 1rem;
+  font-family: 'Rajdhani', sans-serif;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.side-page img{
+    padding-top: .8rem;
+    object-fit: cover;
+    object-position: center;
+}
+.side-page h5{
+    padding: 1rem .5rem;
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+
+/* footerrrrrr */
+
+/* footer */
+footer{
+    background-color: #c9c8c3;
+    position:relative;
+    width:100%;
+    height:47vh;
+    padding-top: 3rem;
+    font-family: 'Rajdhani', sans-serif;
+    color:var(--newdark);
+    top:7rem;
+}
+#text-footer{
+    text-align: center;
+    font-family: 'Rubik';
+    display: relative;
+    padding-top:4rem;
+    font-size:1.1rem;
+    color:gray;
+}
+footer .footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+footer .footer .ft h4{
+    font-size: 1.2rem;
+    color:var(--newdark);
+}
+footer .footer .ft h3{
+    font-size: 1rem;
+}
+footer .footer .ft input{
+    padding:.2rem;
+    border:#c9c8c3;
+}
+/* icons hover */
+.fa-facebook-f:hover{
+    color:#1877f2;
+}
+.fa-twitter:hover{
+    color:dodgerblue;
+}
+.fa-instagram:hover{
+    color:orangered;
+}
+.fa-envelope-open:hover{
+    color:rgb(158, 60, 60);
+}
+.fa-youtube:hover{
+    color:red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  MEDIA QUERY */
+
+/* to smaller screen */
+@media (max-width:991px) {
+    /* HEADER */
+    .container .main-text h1{
+        font-size:clamp(.3rem,2.4rem,12rem);
+        margin-bottom: .5rem;
+       }
+       .container .main-text h3{
+        font-size:clamp(2rem,1rem,5rem);
+       }
+
+    header{
+       padding:20px;
+   }
+   header label{
+       display: initial;
+   }
+   header .navbar{
+       position: absolute;
+       top:100%;
+       left:0;
+       right:0;
+       background: #fff;
+       border-top: 1px solid rgba(0,0,0,.1);
+       display:none;
+   }
+   header .navbar ul li{
+       width: 100%;
+   }
+   header .navbar ul li ul{
+       position: relative;
+   }
+   #menu-bar:checked ~ .navbar{
+       display: initial;
+   }
+   /* end of header */
+   .first-navbar img{
+    display: none;
+   }
+   .grid-form{
+    margin-top: 5rem;
+    }
+
+   /* html height */
+   html{
+   
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+   }
+
+   /* footer */
+   footer{
+    margin-top:5rem;
+    padding:1rem;
+    height: 30rem;
+}
+footer .footer{
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+}
+/* to large screen first phase */
+@media (min-width:700px){
+    .grid-info{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .grid-info .grid{
+        padding:2rem 1rem;
+    }
+    .grid-form{
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem 0;
+        margin:0 2rem;
+    }
+    .sub-container{
+    
+        margin-bottom: 8rem;
+       
+    }
+    .side-page{
+        padding:0 .7rem;
+        margin-right: 3rem;
+    }
+    .form input, textarea{
+        width: 20rem;
+        padding: .8rem 1.3rem;
+    }
+    .form form{
+        padding: .5rem 0;
+        width: 100%;
+    }
+    .form button{
+        width: 40%;
+    }
+    .contact-info{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .form{
+        position: relative;
+        top:3.7rem;
+    }
+  
+}
+
+
+
+@media (max-width:491px) {
+    .container .main-text{
+        width:90%;
+    }
+}
