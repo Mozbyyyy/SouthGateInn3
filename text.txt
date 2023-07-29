@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 TEST2
+=======
+dwad wad 1113
+>>>>>>> parent of 7ae8f97 (Update text.txt)
